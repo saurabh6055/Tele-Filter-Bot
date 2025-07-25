@@ -17,9 +17,9 @@ def is_enabled(value, default):
 
 # ─── Bot Info ───────────────────────────────────────────
 SESSION = environ.get('SESSION', 'Tele_Filter')
-API_ID = int(environ.get('API_ID', ''))
-API_HASH = environ.get('API_HASH', '')
-BOT_TOKEN = environ.get('BOT_TOKEN', "")
+API_ID = int(environ.get('API_ID', '28199593'))
+API_HASH = environ.get('API_HASH', 'b76f22d4916774d1942cb478323249e3')
+BOT_TOKEN = environ.get('BOT_TOKEN', "8498307351:AAGXlfIXljtPvp_8a7Zjs6M2nmvZrL-4YJs")
 
 
 # ─── Bot Settings ───────────────────────────────────────
@@ -50,16 +50,16 @@ auth_grp = environ.get('AUTH_GROUP')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 
-support_chat_id = environ.get('SUPPORT_CHAT_ID', '-1002317832654')
-reqst_channel = environ.get('REQST_CHANNEL_ID', '-1002505094282')
+support_chat_id = environ.get('SUPPORT_CHAT_ID', '-1002077365469')
+reqst_channel = environ.get('REQST_CHANNEL_ID', '-1002217291160')
 REQST_CHANNEL = int(reqst_channel) if reqst_channel and id_pattern.search(reqst_channel) else None
 SUPPORT_CHAT_ID = int(support_chat_id) if support_chat_id and id_pattern.search(support_chat_id) else None
 NO_RESULTS_MSG = bool(environ.get("NO_RESULTS_MSG", False))
 
 
 # ─── MongoDB ─────────────────────────────────────────────
-DATABASE_URI = environ.get('DATABASE_URI', "")
-DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://:@cluster0.mongodb.net/?retryWrites=true&w=majority")
+DATABASE_NAME = environ.get('DATABASE_NAME', "deepu_db")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telefilter')
 
 
@@ -84,8 +84,8 @@ MSG_ALRT = environ.get('MSG_ALRT', 'ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ : 𓆩•�
 
 
 # ─── Display Configurations ─────────────────────────────
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', ""))
-SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'kissuhelp')
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', "-1002591123448"))
+SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'deepu_support')
 
 P_TTI_SHOW_OFF = is_enabled(environ.get('P_TTI_SHOW_OFF', "True"), True)
 IMDB = is_enabled(environ.get('IMDB', "True"), False)
@@ -103,7 +103,7 @@ SPELL_CHECK_REPLY = is_enabled(environ.get("SPELL_CHECK_REPLY", "True"), True)
 MAX_LIST_ELM = environ.get("MAX_LIST_ELM", None)
 
 INDEX_REQ_CHANNEL = int(environ.get('INDEX_REQ_CHANNEL', LOG_CHANNEL))
-FILE_STORE_CHANNEL = [int(ch) for ch in environ.get('FILE_STORE_CHANNEL', '').split()]
+FILE_STORE_CHANNEL = [int(ch) for ch in environ.get('FILE_STORE_CHANNEL', '-1002722911746').split()]
 MELCOW_NEW_USERS = is_enabled(environ.get('MELCOW_NEW_USERS', "False"), True)
 PROTECT_CONTENT = is_enabled(environ.get('PROTECT_CONTENT', "False"), False)
 PUBLIC_FILE_STORE = is_enabled(environ.get('PUBLIC_FILE_STORE', "True"), True)
